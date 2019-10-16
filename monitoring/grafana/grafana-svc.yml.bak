@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2019-10-16T15:25:44Z"
+  labels:
+    app: grafana
+    chart: grafana-3.10.2
+    heritage: Tiller
+    release: grafana
+  name: grafana
+  namespace: monitoring
+  resourceVersion: "45295896"
+  selfLink: /api/v1/namespaces/monitoring/services/grafana
+  uid: 38cdbddf-f029-11e9-8637-06fdaf51968e
+spec:
+  clusterIP: 10.98.229.137
+  ports:
+  - name: service
+    port: 80
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: grafana
+    release: grafana
+  sessionAffinity: None
+  type: NodePort
+#  type: ClusterIP
+status:
+  loadBalancer: {}

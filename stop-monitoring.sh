@@ -1,0 +1,2 @@
+helm del —-purge prometheus
+
