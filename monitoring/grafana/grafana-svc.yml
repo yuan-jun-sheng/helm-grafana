@@ -3,7 +3,7 @@ items:
 - apiVersion: v1
   kind: Service
   metadata:
-    creationTimestamp: "2019-10-16T19:25:45Z"
+    creationTimestamp: "2019-10-25T17:53:21Z"
     labels:
       app: grafana
       chart: grafana-3.10.2
@@ -11,11 +11,11 @@ items:
       release: grafana
     name: grafana
     namespace: monitoring
-    resourceVersion: "45351691"
+    resourceVersion: "48194051"
     selfLink: /api/v1/namespaces/monitoring/services/grafana
-    uid: c0358d27-f04a-11e9-8637-06fdaf51968e
+    uid: 55b54163-f750-11e9-8637-06fdaf51968e
   spec:
-    clusterIP: 10.106.134.168
+    clusterIP: 10.102.18.206
     ports:
     - name: service
       port: 80

@@ -6,6 +6,7 @@ helm init --service-account tiller --wait
 kubectl apply -f monitoring/namespace.yml
 helm install stable/prometheus --namespace monitoring --name prometheus
 kubectl apply -f monitoring/grafana/config.yml
+kubectl apply -f monitoring/grafana/prometheus-overview-dashboard-configmap.yaml
 helm install stable/grafana -f monitoring/grafana/values.yml --namespace monitoring --name grafana
 kubectl get svc -n monitoring -l "app=grafana,release=grafana"  -o yaml > monitoring/grafana/grafana-svc.yml
 sed -i 's/ClusterIP/NodePort/' monitoring/grafana/grafana-svc.yml
